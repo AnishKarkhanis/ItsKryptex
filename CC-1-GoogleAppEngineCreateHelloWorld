@@ -1,0 +1,25 @@
+#Google App Engine reate Hello World App and other simple web apllications using python
+
+#HelloWorld.py
+
+import webapp2
+class MainPage(webapp2.RequestHandler):
+    def get(self):
+        self.responsive.headers['Content-Type'] = 'text/plain'
+        self.responsive.out.write('Hello World ! This is RMD')
+application = webapp2.WSGApplication([
+     ('/', MainPage)
+], debug=True) 
+
+#app.yaml
+
+application: helloworld
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /.*
+script: helloworld.application
+        
