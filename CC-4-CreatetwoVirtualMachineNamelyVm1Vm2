@@ -1,0 +1,20 @@
+# Create two vms namely vm1 and vm2 in virtualbox (ubuntu)
+# NAT Network with network CDR 10.0.2.0/24
+# create a file in vm1 as transfer.txt(Hello from VM1) and send it to vm2 using command
+
+$ scp tranfer.txt vagrant@10.0.2.6:/home/vagrant
+
+~$ cat transfer.txt
+~$ mv transfer.txt transfer.txt
+
+~$ mv tansfer.txt transfer.txt
+
+~$ cat transfer.txt
+
+~$ scp transfer.txt vagrant@10.0.2.6:/home/vagrant
+ #done
+ 
+ ~$ ls /home
+ ~$ ls /home/vagrant/
+ ~$ ls /home/vagrant/transfer.txt
+ ~$ cat transfer.txt
